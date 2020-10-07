@@ -42,6 +42,14 @@
 			"path" : "pages/basic_components/demo_movable",
 			"style" : {}
 		}
+		,{
+			"path" : "pages/basic_components/demo_cover",
+			"style" : {}
+		}
+		,{
+			"path" : "pages/basic_components/demo_icon",
+			"style" : {}
+		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

@@ -12,6 +12,12 @@
 		<navigator class="flex-item" url="demo_movable">
 			<text>movable</text>
 		</navigator>
+		<navigator class="flex-item" url="demo_cover">
+			<text>cover</text>
+		</navigator>
+		<navigator class="flex-item" url="demo_icon">
+			<text>icon</text>
+		</navigator>
 	</view>
 </template>
 
