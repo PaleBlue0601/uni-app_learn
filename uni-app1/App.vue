@@ -39,4 +39,13 @@
 		line-height: 80rpx;
 		border-bottom: 1px solid #d8d8d8;
 	}
+	.item-title {
+		text-align: left;
+		color: #333333;
+		margin: 20rpx auto;
+	}
+	.item-title text {
+		color: #888888;
+		font-size: 15rpx;
+	}
 </style>

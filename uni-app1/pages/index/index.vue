@@ -11,6 +11,9 @@
 		<navigator class="flex-item" url="../basic_components/index">
 			<text>基础组件</text>
 		</navigator>
+		<navigator class="flex-item" url="../form_components/index">
+			<text>表单控件</text>
+		</navigator>
 	</view>
 </template>
 

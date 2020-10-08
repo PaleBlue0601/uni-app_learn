@@ -8,47 +8,99 @@
 		}
 		,{
 			"path" : "pages/map/map",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "map"
+			}
 		}
 		,{
 			"path" : "pages/layout/spaceCenter",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "spaceCenter"
+			}
 		}
 		,{
 			"path" : "pages/layout/juxtaposition",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "juxtaposition"
+			}
 		}
 		,{
 			"path" : "pages/basic_components/demo_view",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "view"
+			}
 		}
 		,{
 			"path" : "pages/layout/index",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "laout"
+			}
 		}
 		,{
 			"path" : "pages/basic_components/index",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "基础组件"
+			}
 		}
 		,{
 			"path" : "pages/basic_components/demo_scroll-view",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "scroll-view"
+			}
 		}
 		,{
 			"path" : "pages/basic_components/demo_swiper",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "swiper"
+			}
 		}
 		,{
 			"path" : "pages/basic_components/demo_movable",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "movable"
+			}
 		}
 		,{
 			"path" : "pages/basic_components/demo_cover",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "cover"
+			}
 		}
 		,{
 			"path" : "pages/basic_components/demo_icon",
-			"style" : {}
+			"style" : {
+				"navigationBarTitleText": "icon"
+			}
+		}
+		,{
+			"path" : "pages/basic_components/demo_text",
+			"style" : {
+				"navigationBarTitleText": "text"
+			}
+		}
+		,{
+			"path" : "pages/basic_components/demo_rich-text",
+			"style" : {
+				"navigationBarTitleText": "rich-text"
+			}
+		}
+		,{
+			"path" : "pages/basic_components/demo_progress",
+			"style" : {
+				"navigationBarTitleText": "progress"
+			}
+		}
+		,{
+			"path" : "pages/form_components/index",
+			"style" : {
+				"navigationBarTitleText": "表单组件"
+			}
+		}
+		,{
+			"path" : "pages/form_components/demo_button",
+			"style" : {
+				"navigationBarTitleText": "button"
+			}
 		}
 	],
 	"globalStyle": {

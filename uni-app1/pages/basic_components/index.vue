@@ -18,6 +18,15 @@
 		<navigator class="flex-item" url="demo_icon">
 			<text>icon</text>
 		</navigator>
+		<navigator class="flex-item" url="demo_text">
+			<text>text</text>
+		</navigator>
+		<navigator class="flex-item" url="demo_rich-text">
+			<text>rich-text</text>
+		</navigator>
+		<navigator class="flex-item" url="demo_progress">
+			<text>progress</text>
+		</navigator>
 	</view>
 </template>
 

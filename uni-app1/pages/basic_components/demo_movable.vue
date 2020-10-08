@@ -94,15 +94,6 @@
 </script>
 
 <style>
-	.item-title {
-		text-align: left;
-		color: #333333;
-		margin: 20rpx auto;
-	}
-	.item-title text {
-		color: #888888;
-		font-size: 15rpx;
-	}
 	.btn {
 		margin-top: 20rpx;
 	}
