@@ -1,0 +1,61 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		}
+		,{
+			"path": "pages/column/column",
+			"style": {
+				"navigationBarTitleText": "栏目",
+				"enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+			}
+		}
+		,{
+			"path": "pages/list/list",
+			"style":  {
+				"navigationBarTitleText": "全部话题",
+				"enablePullDownRefresh": false
+			}	
+		}
+		,{
+			"path": "pages/post/post",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "大连车事儿",
+		"navigationBarBackgroundColor": "#fff"
+	},
+	"tabBar": {
+		"selectedColor": "#333333",
+		"list": [
+			{
+				"pagePath":"pages/index/index",
+				"iconPath":"static/icon/index.png",
+				"selectedIconPath":"static/icon/index_active.png",
+				"text":"首页"
+			},
+			{
+				"pagePath":"pages/column/column",
+				"iconPath":"static/icon/column.png",
+				"selectedIconPath":"static/icon/column_active.png",
+				"text":"栏目"
+			},
+			{
+				"pagePath":"pages/list/list",
+				"iconPath":"static/icon/list.png",
+				"selectedIconPath":"static/icon/list_active.png",
+				"text":"列表"
+			}
+		]
+	}
+}
