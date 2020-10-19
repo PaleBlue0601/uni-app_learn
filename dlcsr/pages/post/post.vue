@@ -349,7 +349,6 @@
 			},
 			like() {
 				if(this.like_count == 0) {
-					
 					this.$refs.like.style.color = 'red'
 					this.like_count = 1
 				} else {

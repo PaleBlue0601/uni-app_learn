@@ -6,28 +6,40 @@
 				<i class="fa fa-bell-o" aria-hidden="true"></i>
 			</view>
 		</uni-nav-bar>
-		<view class="content">
-			<view class="search-widget">
-				<input class="search-widget_input" type="text" :value="inputvalue" @blur="addTimer" @focus="delTimer"/>
-				<i class="fa fa-search" aria-hidden="true"></i>
-			</view>
-			<view class="category-widget">
-				<view class="category-item" v-for="(item, index) in category" :key="index">
-					<image :src="item.imgsrc" ></image>
-					<text>{{item.text}}</text>
+		<scroll-view scroll-y="true" class="column-scroll">
+			<view class="content">
+				<view class="search-widget">
+					<input class="search-widget_input" type="text" :value="inputvalue" @blur="addTimer" @focus="delTimer"/>
+					<i class="fa fa-search" aria-hidden="true"></i>
 				</view>
-			</view>
-			<view class="select-widget">
-				<view class="select-widget_bg">
-					<!-- <image src="../../static/column/bg.png"></image> -->
-					<view class="img_cover">
-						<i class="fa fa-plus" aria-hidden="true"></i>
-						<text>选择您的车型\n</text>
-						<text>为您匹配服务以及产品</text>
+				<view class="category-widget">
+					<view class="category-item" v-for="(item, index) in category" :key="index">
+						<image :src="item.imgsrc" ></image>
+						<text>{{item.text}}</text>
+					</view>
+				</view>
+				<view class="select-widget">
+					<view class="select-widget_bg">
+						<view class="img_cover" v-show="!isShowBrannerName">
+							<i class="fa fa-plus" aria-hidden="true" @click="showList"></i>
+							<text>选择您的车型\n</text>
+							<text>为您匹配服务以及产品</text>
+						</view>
+						<view class="img_cover" v-show="isShowBrannerName">
+							<view class="branner-text">
+								{{selectBranner}}
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 品牌列表 -->
+				<view class="brand-list" v-show="isShowList">
+					<view class="brand-item" v-for="(item, index) in brands" :key="index" @click="selectCar(index)">
+						<text>{{item}}</text>
 					</view>
 				</view>
 			</view>
-		</view>
+		</scroll-view>
 	</view>
 </template>
 
@@ -70,7 +82,11 @@
 					}
 				],
 				inputvalue: '米狗',
-				timer: ''
+				timer: '',
+				brands: ['奥迪','宝马','大众','奔驰','宾利','丰田','本田','路虎','悍马'],
+				selectBranner: '奥迪',
+				isShowBrannerName: false,
+				isShowList: false
 			}
 		},
 		created() {
@@ -94,6 +110,14 @@
 			// 重新添加定时器
 			addTimer() {
 				this.switchInputvalue()
+			},
+			showList() { //显示品牌列表
+				this.isShowList = true
+			},
+			selectCar(index) {
+				this.selectBranner = this.brands[index]
+				this.isShowList = false
+				this.isShowBrannerName = true
 			}
 		}
 	}
@@ -192,5 +216,25 @@
 		display: inline-block;
 		margin-top: 10rpx;
 		font-size: 28rpx;
+	}
+	.brand-list {
+		width: 100%;
+		background-color: #FFFFFF;
+		padding: 0 30rpx;
+		box-sizing: border-box;
+	}
+	.brand-list .brand-item {
+		box-sizing: border-box;
+		padding: 20rpx 30rpx;
+		border-bottom: 2rpx solid #CCCCCC;
+		text-align: left;
+	}
+	.column-scroll {
+		height: 573px;
+	}
+	.branner-text {
+		text-align: center;
+		line-height: 120rpx;
+		font-size: 40rpx;
 	}
 </style>

@@ -2,7 +2,10 @@
 	<view>
 		<!-- 自定义导航栏 -->
 		<uni-nav-bar>
-			<view class="nav-title">大连车事儿</view>
+			<view class="nav-title">
+				<image src="../../static/logo.png" mode=""></image>
+				<text>大连车事儿</text>
+			</view>
 			<view class="nav-left" slot="left">
 				大连市<i class="fa fa-angle-down" aria-hidden="true"></i>
 			</view>
@@ -435,5 +438,20 @@
 	}
 	.card-item:last-child {
 		margin-bottom: 0;
+	}
+	.nav-title {
+		height: 88rpx;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	.nav-title image {
+		display: block;
+		width: 88rpx;
+		height: 88rpx;
+	}
+	.nav-title text {
+		display: block;
 	}
 </style>
