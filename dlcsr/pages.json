@@ -29,7 +29,15 @@
 				"navigationStyle":"custom"
 			}
 		}
-	],
+		,{
+			"path" : "pages/carlist/carlist",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "绑定车型",
+				"enablePullDownRefresh": false
+			}	
+		}
+   ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "大连车事儿",

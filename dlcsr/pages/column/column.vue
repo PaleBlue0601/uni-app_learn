@@ -21,21 +21,15 @@
 				<view class="select-widget">
 					<view class="select-widget_bg">
 						<view class="img_cover" v-show="!isShowBrannerName">
-							<i class="fa fa-plus" aria-hidden="true" @click="showList"></i>
+							<i class="fa fa-plus" aria-hidden="true" @click="tocarList"></i>
 							<text>选择您的车型\n</text>
 							<text>为您匹配服务以及产品</text>
 						</view>
-						<view class="img_cover" v-show="isShowBrannerName">
+						<view class="img_cover" v-show="isShowBrannerName" @click="resetCar">
 							<view class="branner-text">
 								{{selectBranner}}
 							</view>
 						</view>
-					</view>
-				</view>
-				<!-- 品牌列表 -->
-				<view class="brand-list" v-show="isShowList">
-					<view class="brand-item" v-for="(item, index) in brands" :key="index" @click="selectCar(index)">
-						<text>{{item}}</text>
 					</view>
 				</view>
 			</view>
@@ -85,12 +79,14 @@
 				timer: '',
 				brands: ['奥迪','宝马','大众','奔驰','宾利','丰田','本田','路虎','悍马'],
 				selectBranner: '奥迪',
-				isShowBrannerName: false,
-				isShowList: false
+				isShowBrannerName: false
 			}
 		},
 		created() {
 			this.switchInputvalue()
+		},
+		onLoad() {
+			
 		},
 		methods: {
 			// 使用定时器实现inputvalue值的定时切换
@@ -111,13 +107,17 @@
 			addTimer() {
 				this.switchInputvalue()
 			},
-			showList() { //显示品牌列表
-				this.isShowList = true
+			tocarList() { //跳转页面
+				uni.navigateTo({
+					url: '../carlist/carlist'
+				})
 			},
-			selectCar(index) {
-				this.selectBranner = this.brands[index]
-				this.isShowList = false
+			getCarname(name) { //接受返回参数
+				this.selectBranner = name
 				this.isShowBrannerName = true
+			},
+			resetCar() {
+				this.isShowBrannerName = false
 			}
 		}
 	}
